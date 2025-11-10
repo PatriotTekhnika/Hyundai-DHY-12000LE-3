@@ -278,6 +278,13 @@
             justify-content: space-between;
             gap: 15px;
         }
+        .feature-item .feature-title {
+            /* === ДОДАНО: Збільшення відстані між номером і текстом === */
+            display: flex;
+            align-items: center;
+            gap: 15px; 
+            /* ======================================================= */
+        }
         .feature-item.active {
             background-color: var(--primary-color);
             color: white;
@@ -302,6 +309,7 @@
             border: 3px solid var(--primary-color);
             border-radius: 20%;
             transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+            /* margin-right: 15px; - Замінено на gap у .feature-title */
         }
         .feature-item:hover .number-box, .feature-item.active .number-box {
             background-color: white;
@@ -826,7 +834,7 @@
                                 </div>
                             </div>
                             <div class="map-container">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115.52906402450849!2d30.3967561!3d50.4619595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cdefe3eed945%3A0xf1bf5cfe69ddc48!2z0J7QsdC-0YPRgtC-0Y_Rh9C10YIg0JvRltC70LDRgNCw0L3RgdC-0LrQsA!5e0!3m2!1sru!2sua!4v1725952924151!5m2!1sru!2sua" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115.52906402450849!2d30.3967561!3d50.4619595!2m3!1f0!2f0!0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cdefe3eed945%3A0xf1bf5cfe69ddc48!2z0J7QsdC-0YPRgtC-0Y_Rh9C10YIg0JvRltC70LDRgNCw0L3RgdC-0LrQsA!5e0!3m2!1sru!2sua!4v1725952924151!5m2!1sru!2sua" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>

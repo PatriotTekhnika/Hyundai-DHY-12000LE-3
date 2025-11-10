@@ -99,6 +99,7 @@
             color: white;
         }
         
+        /* === Зміни для секції ціни === */
         .price-section {
             position: relative;
             padding: 15px;
@@ -109,15 +110,19 @@
             transition: all 0.3s ease;
             cursor: pointer;
         }
+        /* Ефект при наведенні */
         .price-section:hover {
-            border-color: #003366;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            background-color: var(--primary-color); /* Зміна фону на основний колір */
+            border-color: var(--primary-color); 
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
         }
         
-        .price-section:hover .new-price {
-            color: var(--primary-color);
+        /* Зміна кольору тексту ціни на білий при наведенні */
+        .price-section:hover .new-price,
+        .price-section:hover .old-price {
+            color: white;
         }
-        
+
         .discount-badge {
             position: absolute;
             top: -12px;
@@ -143,6 +148,7 @@
             font-weight: 500;
             color: #999;
             text-decoration: line-through;
+            transition: color 0.3s ease;
         }
 
         .product-content {
@@ -281,11 +287,6 @@
             background-color: var(--primary-color);
             color: white;
             border-color: var(--primary-color);
-        }
-        .feature-item .feature-title {
-            display: flex;
-            align-items: center;
-            gap: 15px;
         }
         .feature-item .number-box {
             background-color: white;
@@ -538,14 +539,14 @@
         <div class="image-gallery">
             <img id="mainProductImage" class="main-image" src="https://wizard-technics.com/image/catalog/easyphoto/51/generator-dizelniy-dhy-12000le-3-9.jpg" alt="Основне зображення дизельного генератора">
             <div class="thumbnail-container">
-                <img class="thumbnail active" src="https://wizard-technics.com/image/catalog/easyphoto/51/generator-dizelniy-dhy-12000le-3-9.jpg" alt="Основне зображення" onclick="changeMainImage(this)">
-                <img class="thumbnail" src="https://wizard-technics.com/image/cache/catalog/easyphoto/51/generator-dizelniy-dhy-12000le-3-6-1000x1000.jpg" alt="Вигляд збоку" onclick="changeMainImage(this)">
-                <img class="thumbnail" src="https://wizard-technics.com/image/cache/catalog/easyphoto/51/generator-dizelniy-dhy-12000le-3-10-1000x1000.jpg" alt="Панель керування" onclick="changeMainImage(this)">
-                <img class="thumbnail" src="https://wizard-technics.com/image/cache/catalog/easyphoto/51/generator-dizelniy-dhy-12000le-3-3-1000x1000.jpg" alt="Вигляд спереду" onclick="changeMainImage(this)">
-                <img class="thumbnail" src="https://wizard-technics.com/image/cache/catalog/easyphoto/51/generator-dizelniy-dhy-12000le-3-8-1000x1000.jpg" alt="Деталь двигуна" onclick="changeMainImage(this)">
-                <img class="thumbnail" src="https://wizard-technics.com/image/cache/catalog/easyphoto/51/generator-dizelniy-dhy-12000le-3-5-1000x1000.jpg" alt="Вигляд зверху" onclick="changeMainImage(this)">
-                <img class="thumbnail" src="https://wizard-technics.com/image/cache/catalog/easyphoto/51/generator-dizelniy-dhy-12000le-3-7-1000x1000.jpg" alt="Інший ракурс" onclick="changeMainImage(this)">
-                <img class="thumbnail" src="https://wizard-technics.com/image/cache/catalog/easyphoto/51/generator-dizelniy-dhy-12000le-3-4-1000x1000.jpg" alt="Додатковий вигляд" onclick="changeMainImage(this)">
+                <img class="thumbnail active" src="https://wizard-technics.com/image/catalog/easyphoto/51/generator-dizelniy-dhy-12000le-3-9.jpg" alt="Основне зображення" onerror="this.onerror=null; this.src='https://placehold.co/65x65/004d96/ffffff?text=HY'" onclick="changeMainImage(this)">
+                <img class="thumbnail" src="https://wizard-technics.com/image/cache/catalog/easyphoto/51/generator-dizelniy-dhy-12000le-3-6-1000x1000.jpg" alt="Вигляд збоку" onerror="this.onerror=null; this.src='https://placehold.co/65x65/004d96/ffffff?text=HY'" onclick="changeMainImage(this)">
+                <img class="thumbnail" src="https://wizard-technics.com/image/cache/catalog/easyphoto/51/generator-dizelniy-dhy-12000le-3-10-1000x1000.jpg" alt="Панель керування" onerror="this.onerror=null; this.src='https://placehold.co/65x65/004d96/ffffff?text=HY'" onclick="changeMainImage(this)">
+                <img class="thumbnail" src="https://wizard-technics.com/image/cache/catalog/easyphoto/51/generator-dizelniy-dhy-12000le-3-3-1000x1000.jpg" alt="Вигляд спереду" onerror="this.onerror=null; this.src='https://placehold.co/65x65/004d96/ffffff?text=HY'" onclick="changeMainImage(this)">
+                <img class="thumbnail" src="https://wizard-technics.com/image/cache/catalog/easyphoto/51/generator-dizelniy-dhy-12000le-3-8-1000x1000.jpg" alt="Деталь двигуна" onerror="this.onerror=null; this.src='https://placehold.co/65x65/004d96/ffffff?text=HY'" onclick="changeMainImage(this)">
+                <img class="thumbnail" src="https://wizard-technics.com/image/cache/catalog/easyphoto/51/generator-dizelniy-dhy-12000le-3-5-1000x1000.jpg" alt="Вигляд зверху" onerror="this.onerror=null; this.src='https://placehold.co/65x65/004d96/ffffff?text=HY'" onclick="changeMainImage(this)">
+                <img class="thumbnail" src="https://wizard-technics.com/image/cache/catalog/easyphoto/51/generator-dizelniy-dhy-12000le-3-7-1000x1000.jpg" alt="Інший ракурс" onerror="this.onerror=null; this.src='https://placehold.co/65x65/004d96/ffffff?text=HY'" onclick="changeMainImage(this)">
+                <img class="thumbnail" src="https://wizard-technics.com/image/cache/catalog/easyphoto/51/generator-dizelniy-dhy-12000le-3-4-1000x1000.jpg" alt="Додатковий вигляд" onerror="this.onerror=null; this.src='https://placehold.co/65x65/004d96/ffffff?text=HY'" onclick="changeMainImage(this)">
             </div>
         </div>
 
